@@ -36,19 +36,22 @@ This system is designed for a point-to-point communication link between an **Acc
 
 ---
 
-## Methods
+## DNN schemes
+The primary objective is to maximize the energy efficiency, which is the ratio of throughput to total consumed power. The optimization problem is tackled using one of the DNN schemes below, which solves for the optimal power allocation and modulation scheme under non-convex constraints.
 
 ### 1. Online Learning
 
 An **online learning** algorithm is implemented to dynamically adapt the power allocation and modulation per subcarrier based on **instantaneous Channel State Information (CSI)**. A deep neural network is trained during the transmission process to continuously improve energy efficiency.
+- Input: Channel state information (CSI) for each subcarrier.
+- Output: Power allocation \( \mathbf{p} \) and modulation indices \( \mathbf{a} \).
+- Activation functions: **Softmax** is used for power allocation, and **Gumbel-Softmax** for selecting modulation orders.
 
 ### 2. Unsupervised Learning
 
 The **unsupervised learning** approach relies on random channel realizations and batch training to generalize the system to unseen conditions. It is less specific than online learning but provides robust solutions across a range of channel states.
-
-### 3. Energy Efficiency Maximization
-
-The primary objective is to maximize the energy efficiency, which is the ratio of throughput to total consumed power. The optimization problem is tackled using the DNN, which solves for the optimal power allocation and modulation scheme under non-convex constraints.
+- Input: Channel state information (CSI) for each subcarrier.
+- Output: Power allocation \( \mathbf{p} \) and modulation indices \( \mathbf{a} \).
+- Activation functions: **Softmax** is used for power allocation, and **Gumbel-Softmax** for selecting modulation orders.
 
 ---
 
