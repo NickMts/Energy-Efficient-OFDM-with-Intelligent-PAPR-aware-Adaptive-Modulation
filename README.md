@@ -121,14 +121,8 @@ We welcome contributions! Feel free to fork the repository, create a new branch,
 
 The algorithm and methodology are based on the following research paper:
 
-- N. A. Mitsiou, P. D. Diamantoulakis, P. G. Sarigiannidis, and G. K. Karagiannidis, "Energy Efficient OFDM With Intelligent PAPR-Aware Adaptive Modulation," IEEE Communications Letters, 2023.
-
----
+- N. A. Mitsiou, P. D. Diamantoulakis, P. G. Sarigiannidis and G. K. Karagiannidis, "Energy Efficient OFDM With Intelligent PAPR-Aware Adaptive Modulation," in IEEE Communications Letters, vol. 27, no. 12, pp. 3290-3294, Dec. 2023, doi: 10.1109/LCOMM.2023.3324137.
 
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
----
-
-Feel free to modify the content based on your specific needs. Let me know if you need further adjustments!
