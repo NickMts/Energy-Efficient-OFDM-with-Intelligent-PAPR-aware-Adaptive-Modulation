@@ -1,5 +1,134 @@
-# Energy-Efficient-OFDM-with-Intelligent-PAPR-aware-Adaptive-Modulation
-Overview:
-This repository contains the implementation of an adaptive modulation scheme that enhances the energy efficiency of Orthogonal Frequency Division Multiplexing (OFDM) systems. The scheme is designed with a specific focus on mitigating the high peak-to-average power ratio (PAPR), a common issue in OFDM, using intelligent, online deep learning-based methods.
+# Energy Efficient OFDM with Intelligent PAPR-Aware Adaptive Modulation
 
-By optimizing power allocation and modulation per subcarrier, the approach aims to maximize the energy efficiency of OFDM transmissions, crucial for modern wireless networks such as 6G. The proposed method showcases improved energy efficiency and reduced PAPR compared to traditional PAPR-unaware OFDM systems.
+## Overview
+
+This repository contains the implementation of a novel **PAPR-aware adaptive modulation** scheme to enhance the energy efficiency of Orthogonal Frequency Division Multiplexing (OFDM) systems. The scheme mitigates the high **Peak-to-Average Power Ratio (PAPR)** of OFDM signals using an intelligent, deep learning-based approach, optimizing both modulation and power allocation per subcarrier.
+
+---
+
+## Key Features
+
+- **PAPR-Aware Adaptive Modulation**:
+  - Modulation and power allocation optimized based on PAPR awareness to improve the Power Amplifier (PA) efficiency and reduce energy consumption.
+  
+- **Deep Learning-Based Optimization**:
+  - A deep neural network (DNN) is used to solve the non-convex optimization problem caused by PAPR.
+  - Two learning approaches are implemented: **Online learning** and **Unsupervised learning**.
+
+- **Energy Efficiency Gains**:
+  - Achieves up to **3 dB** improvement in energy efficiency over conventional PAPR-unaware OFDM systems.
+  - Lowers PAPR by up to **3 dB**, especially in high Signal-to-Noise Ratio (SNR) scenarios.
+
+- **Supports Multiple Modulation Orders**:
+  - The system supports modulation orders like **4-QAM**, **16-QAM**, **64-QAM**, and higher, allowing flexibility based on channel conditions.
+
+---
+
+## System Model
+
+This system is designed for a point-to-point communication link between an **Access Point (AP)** and a user, utilizing **K** subcarriers. Each subcarrier can use a different modulation scheme based on channel conditions, while power allocation is dynamically optimized across subcarriers to reduce PAPR and improve energy efficiency.
+
+### Key Parameters:
+- **OFDM Transmission**: Multi-carrier modulation scheme for transmitting data over subcarriers.
+- **PAPR**: Peak-to-Average Power Ratio, a major challenge in OFDM systems.
+- **Power Allocation**: Dynamically adjusts power per subcarrier to minimize energy consumption and maximize PA efficiency.
+- **Deep Learning**: A DNN is employed to learn the optimal power and modulation settings for maximizing energy efficiency.
+
+---
+
+## Methods
+
+### 1. Online Learning
+
+An **online learning** algorithm is implemented to dynamically adapt the power allocation and modulation per subcarrier based on **instantaneous Channel State Information (CSI)**. A deep neural network is trained during the transmission process to continuously improve energy efficiency.
+
+### 2. Unsupervised Learning
+
+The **unsupervised learning** approach relies on random channel realizations and batch training to generalize the system to unseen conditions. It is less specific than online learning but provides robust solutions across a range of channel states.
+
+### 3. Energy Efficiency Maximization
+
+The primary objective is to maximize the energy efficiency, which is the ratio of throughput to total consumed power. The optimization problem is tackled using the DNN, which solves for the optimal power allocation and modulation scheme under non-convex constraints.
+
+---
+
+## Installation
+
+Follow these steps to install and run the project:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/energy-efficient-ofdm.git
+    cd energy-efficient-ofdm
+    ```
+
+2. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Run the simulation:
+    ```bash
+    python run_simulation.py
+    ```
+
+---
+
+## Usage
+
+### Configuration
+
+You can configure system parameters such as:
+- Number of subcarriers (K)
+- Modulation orders (e.g., 64-QAM)
+- Maximum power constraints
+- Path loss, noise levels, and SNR values
+
+These settings can be modified in the `config.py` file.
+
+### Running Simulations
+
+Use the following command to run a simulation of the proposed PAPR-aware OFDM system:
+
+```bash
+python run_simulation.py --snr 35 --modulation '64-QAM'
+```
+
+This command will run the simulation with 64-QAM modulation and an SNR value of 35 dB.
+
+---
+
+## Results
+
+### Energy Efficiency
+
+- The proposed system shows up to **3 dB improvement** in energy efficiency over conventional PAPR-unaware OFDM systems.
+- The performance enhancement is particularly significant at higher SNRs, where PAPR becomes a limiting factor.
+
+### PAPR Reduction
+
+- The PAPR-aware scheme lowers PAPR by up to **3 dB** compared to a PAPR-unaware system, especially in high-SNR environments, contributing to higher PA efficiency.
+
+---
+
+## Contributing
+
+We welcome contributions! Feel free to fork the repository, create a new branch, and submit a pull request with improvements or new features.
+
+---
+
+## References
+
+The algorithm and methodology are based on the following research paper:
+
+- N. A. Mitsiou, P. D. Diamantoulakis, P. G. Sarigiannidis, and G. K. Karagiannidis, "Energy Efficient OFDM With Intelligent PAPR-Aware Adaptive Modulation," IEEE Communications Letters, 2023.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+---
+
+Feel free to modify the content based on your specific needs. Let me know if you need further adjustments!
