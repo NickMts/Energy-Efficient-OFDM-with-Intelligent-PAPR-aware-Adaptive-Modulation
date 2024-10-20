@@ -92,4 +92,5 @@ The algorithm and methodology are based on the following research paper:
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+- The code in this repository is licensed under the MIT License. See the LICENSE file for details.
+- The paper and any associated figures or text are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License.
