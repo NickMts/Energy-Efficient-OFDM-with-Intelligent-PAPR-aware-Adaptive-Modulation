@@ -55,49 +55,13 @@ The **unsupervised learning** approach relies on random channel realizations and
 
 ---
 
-## Installation
-
-Follow these steps to install and run the project:
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/energy-efficient-ofdm.git
-    cd energy-efficient-ofdm
-    ```
-
-2. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Run the simulation:
-    ```bash
-    python run_simulation.py
-    ```
-
----
-
-## Usage
-
-### Configuration
+## Configuration
 
 You can configure system parameters such as:
 - Number of subcarriers (K)
 - Modulation orders (e.g., 64-QAM)
 - Maximum power constraints
 - Path loss, noise levels, and SNR values
-
-These settings can be modified in the `config.py` file.
-
-### Running Simulations
-
-Use the following command to run a simulation of the proposed PAPR-aware OFDM system:
-
-```bash
-python run_simulation.py --snr 35 --modulation '64-QAM'
-```
-
-This command will run the simulation with 64-QAM modulation and an SNR value of 35 dB.
 
 ---
 
@@ -116,7 +80,7 @@ This command will run the simulation with 64-QAM modulation and an SNR value of 
 
 ## Contributing
 
-We welcome contributions! Feel free to fork the repository, create a new branch, and submit a pull request with improvements or new features.
+Contributions are welcomed! Feel free to fork the repository, create a new branch, and submit a pull request with improvements or new features.
 
 ---
 
